@@ -1,0 +1,36 @@
+// Menunggu hingga seluruh dokumen dimuat
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('formTransaksi');
+    const tabelData = document.getElementById('tabelData');
+
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            // Menghentikan pengiriman form otomatis
+            event.preventDefault();
+
+            // Mengambil nilai dari input (Soal No. 9)
+            const nama = document.getElementById('nama').value;
+            const jumlah = document.getElementById('jumlah').value;
+            const kategori = document.getElementById('kategori').value;
+
+            // Validasi: Pastikan semua input diisi (Soal No. 9a)
+            if (nama === "" || jumlah === "" || kategori === "") {
+                alert("Pesan Kesalahan: Semua kolom input harus diisi sebelum mengirim formulir!");
+                return;
+            }
+
+            // Jika validasi berhasil, tambahkan data ke tabel (Soal No. 5b)
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${nama}</td>
+                <td>${jumlah}</td>
+                <td>${kategori}</td>
+            `;
+            tabelData.appendChild(row);
+
+            // Reset form setelah simpan
+            form.reset();
+            alert("Data Transaksi Berhasil Disimpan!");
+        });
+    }
+});
