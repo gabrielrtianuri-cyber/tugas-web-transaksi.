@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - Tugas Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Menu Transaksi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Input Transaksi Baru</h2>
+        <form id="formTransaksi">
+            <label for="nama">Nama Transaksi:</label><br>
+            <input type="text" id="nama" name="nama" required><br><br>
+            
+            <label for="jumlah">Jumlah:</label><br>
+            <input type="number" id="jumlah" name="jumlah" required><br><br>
+            
+            <label for="kategori">Kategori:</label><br>
+            <select id="kategori" name="kategori" required>
+                <option value="">Pilih Kategori</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Transportasi">Transportasi</option>
+                <option value="Lainnya">Lainnya</option>
+            </select><br><br>
+            
+            <button type="submit">Simpan</button>
+        </form>
+
+        <hr>
+
+        <h2>Daftar Transaksi</h2>
+        <table border="1" style="width:100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th>Nama Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody id="tabelData">
+                <tr>
+                    <td>Contoh Makan Siang</td>
+                    <td>25000</td>
+                    <td>Makanan</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gabriel Nuri</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
