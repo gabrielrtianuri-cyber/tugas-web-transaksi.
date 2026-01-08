@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; padding: 20px; }
+header { background: #333; color: white; padding: 10px; }
+/* Responsivitas Soal No 8 */
+@media (max-width: 600px) {
+  body { font-size: 14px; }
+  header { text-align: center; }
+}
